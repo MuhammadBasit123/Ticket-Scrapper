@@ -1,0 +1,21 @@
+{
+  "name": "support-ticket-extractor",
+  "version": "1.0.0",
+  "description": "Structured output extraction pipeline: turns messy support emails/tickets into validated, typed data.",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "evaluate": "tsc -p tsconfig.json && node dist/evaluate.js",
+    "evaluate:mock": "tsc -p tsconfig.json && USE_MOCK=1 node dist/evaluate.js",
+    "start:mock": "npm run evaluate:mock"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.32.1",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.3",
+    "@types/node": "^20.14.10"
+  }
+}
